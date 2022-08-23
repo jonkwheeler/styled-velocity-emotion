@@ -5,13 +5,13 @@ Styled-Velocity with Emotion, a React-based styled prop and UI library to increa
 ## Install
 
 ```js
-yarn add @emotion/react styled-velocity-emotion
+yarn add @emotion/react @emotion/styled styled-velocity-emotion
 ```
 
 or
 
 ```js
-npm install @emotion/react styled-velocity-emotion
+npm install @emotion/react @emotion/styled styled-velocity-emotion
 ```
 
 ## sharedProps
