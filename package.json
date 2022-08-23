@@ -7,6 +7,14 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jonkwheeler/styled-velocity-emotion.git"
+  },
+  "publishConfig": {
+    "scope": "jonkwheeler",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "build-storybook": "build-storybook",
     "build:cjs": "tsc --module CommonJS --outDir dist/cjs",
