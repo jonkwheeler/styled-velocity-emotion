@@ -21,7 +21,7 @@
     "build:esm": "tsc",
     "build": "rm -rf /dist && yarn build:esm && yarn build:cjs",
     "dev": "yarn storybook",
-    "release": "yarn release-it",
+    "release": "yarn build && yarn release-it",
     "storybook": "start-storybook -p 6006"
   },
   "author": "Jon Wheeler",
