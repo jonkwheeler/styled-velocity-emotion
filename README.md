@@ -5,13 +5,13 @@ Styled-Velocity with Emotion, a React-based styled prop and UI library to increa
 ## Install
 
 ```js
-yarn add styled-velocity-emotion
+yarn add @emotion/react styled-velocity-emotion
 ```
 
 or
 
 ```js
-npm install styled-velocity-emotion
+npm install @emotion/react styled-velocity-emotion
 ```
 
 ## sharedProps
@@ -19,7 +19,7 @@ npm install styled-velocity-emotion
 Import example:
 
 ```js
-import { appearanceProps, dimensionProps } from 'styled-velocity-emtion'
+import { appearanceProps, dimensionProps } from 'styled-velocity-emotion'
 ```
 
 ## Components
@@ -29,7 +29,7 @@ import { appearanceProps, dimensionProps } from 'styled-velocity-emtion'
 Import example:
 
 ```js
-import { Element, Flex, Main, Section } 'styled-velocity'
+import { Element, Flex, Main, Section } 'styled-velocity-emotion'
 ```
 
 ## Available sharedProps
