@@ -1,6 +1,6 @@
-import { SharedProps } from './SharedProps'
+import { ElementProps } from '../components/Element'
 
-export interface FlexContainerProps extends SharedProps {
+export interface FlexContainerProps extends ElementProps {
   /**
    * columns
    * @desc Number of columns in a flex container

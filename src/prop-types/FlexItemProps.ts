@@ -1,6 +1,6 @@
-import { SharedProps } from './SharedProps'
+import { ElementProps } from '../components/Element'
 
-export interface FlexItemProps extends SharedProps {
+export interface FlexItemProps extends ElementProps {
   /**
    * @returns align-self css property
    * @type object | 'top' | 'bottom' | 'center' | 'middle' | 'stretch'
@@ -18,7 +18,7 @@ export interface FlexItemProps extends SharedProps {
    * grow={1}
    * grow={{ 0: 1, 768: 0 }}
    */
-  grow?: boolean | object
+  grow?: string | number | object
 
   /**
    * shrink
@@ -28,7 +28,7 @@ export interface FlexItemProps extends SharedProps {
    * shrink={0}
    * shrink={{ 0: 1, 768: 0 }}
    */
-  shrink?: boolean | object
+  shrink?: string | number | object
 
   /**
    * order
