@@ -14,14 +14,6 @@ or
 npm install @emotion/react @emotion/styled styled-velocity-emotion
 ```
 
-## sharedProps
-
-Import example:
-
-```js
-import { appearanceProps, dimensionProps } from 'styled-velocity-emotion'
-```
-
 ## Components
 
 **All of the following have access to the sharedProps.**
@@ -32,93 +24,104 @@ Import example:
 import { Element, Flex } 'styled-velocity-emotion'
 ```
 
-## Available sharedProps
+## Available Props on Element
 
-| import            | prop            | css property              | conversionType    |
-| ----------------- | --------------- | ------------------------- | ----------------- |
-| `appearanceProps` | `bg`            | background                |                   |
-| ""                | `bgImage`       | background-image          |                   |
-| ""                | `bgSize`        | background-size           |                   |
-| ""                | `border`        | border                    |                   |
-| ""                | `borderLeft`    | border-left               |                   |
-| ""                | `borderRight`   | border-right              |                   |
-| ""                | `borderBottom`  | border-bottom             |                   |
-| ""                | `borderRadius`  | border-radius             |                   |
-| ""                | `boxShadow`     | box-shadow                |                   |
-| `cssProps`        | `css`           | any css                   |                   |
-| `dimensionProps`  | `m`             | margin                    |                   |
-| ""                | `mt`            | margin-top                |                   |
-| ""                | `mb`            | margin-bottom             |                   |
-| ""                | `ml`            | margin-left               |                   |
-| ""                | `mr`            | margin-right              |                   |
-| ""                | `mx`            | `ml` and `mr`             |                   |
-| ""                | `my`            | `mt` and `mb`             |                   |
-| ""                | `p`             | padding                   |                   |
-| ""                | `pt`            | padding-top               |                   |
-| ""                | `pb`            | padding-bottom            |                   |
-| ""                | `pl`            | padding-left              |                   |
-| ""                | `pr`            | padding-right             |                   |
-| ""                | `px`            | `pl` and `pr`             |                   |
-| ""                | `py`            | `pt` and `pb`             |                   |
-| ""                | `h`             | height                    |                   |
-| ""                | `w`             | width, flex-basis         |                   |
-| ""                | `minh`          | min-height                |                   |
-| ""                | `minw`          | min-width                 |                   |
-| ""                | `maxh`          | max-height                |                   |
-| ""                | `maxw`          | max-width                 |                   |
-| ""                | `c`             | `cw` and `ch`             | getCells          |
-| ""                | `cw`            | cells wide                | getCells          |
-| ""                | `ch`            | cells height (cells tall) | getCells          |
-| ""                | `cm`            | cells margin              | getCells          |
-| ""                | `cml`           | cells margin-left         | getCells          |
-| ""                | `cmr`           | cells margin-right        | getCells          |
-| ""                | `cmt`           | cells margin-top          | getCells          |
-| ""                | `cmb`           | cells margin-bottom       | getCells          |
-| ""                | `cmx`           | `cml` and `cmr`           | getCells          |
-| ""                | `cmy`           | `cmt` and `cmb`           | getCells          |
-| ""                | `cp`            | cells padding             | getCells          |
-| ""                | `cpl`           | cells padding-left        | getCells          |
-| ""                | `cpr`           | cells padding-right       | getCells          |
-| ""                | `cpt`           | cells padding-top         | getCells          |
-| ""                | `cpb`           | cells padding-bottom      | getCells          |
-| ""                | `cpx`           | `cpl` and `cpr`           | getCells          |
-| ""                | `cpy`           | `cpt` and `cpb`           | getCells          |
-| ""                | `ctransform`    | cells transform           | getCellsTranslate |
-| `flexProps`       | `direction`     | flex-direction            |                   |
-| ""                | `wrap`          | flex-wrap                 |                   |
-| ""                | `align`         | justify-content           | getFlexProperty   |
-| ""                | `valign`        | align-items               | getFlexProperty   |
-| ""                | `valignContent` | align-content             | getFlexProperty   |
-| ""                | `grow`          | flex-grow                 |                   |
-| ""                | `shrink`        | flex-shrink               |                   |
-| `positionProps`   | `t`             | top                       |                   |
-| ""                | `b`             | bottom                    |                   |
-| ""                | `l`             | left                      |                   |
-| ""                | `r`             | right                     |                   |
-| ""                | `x`             | `r` and `l`               |                   |
-| ""                | `y`             | `t` and `b`               |                   |
-| ""                | `ct`            | cells top                 | getCells          |
-| ""                | `cb`            | cells bottom              | getCells          |
-| ""                | `cl`            | cells left                | getCells          |
-| ""                | `cr`            | cells right               | getCells          |
-| ""                | `cx`            | `cr` and `cl`             | getCells          |
-| ""                | `cy`            | `ct` and `cb`             | getCells          |
-| ""                | `position`      | position                  |                   |
-| ""                | `z`             | z-index                   |                   |
-| `textProps`       | `color`         | color                     |                   |
-| ""                | `textColor`     | color                     |                   |
-| ""                | `textAlign`     | text-align                |                   |
-| ""                | `textTransform` | text-transform            |                   |
-| ""                | `fontFamily`    | font-family               |                   |
-| ""                | `fontSize`      | font-size                 |                   |
-| ""                | `fontWeight`    | font-weight               |                   |
-| ""                | `lineHeight`    | line-height               |                   |
+| prop            | css property              | conversionType    |
+| --------------- | ------------------------- | ----------------- |
+| `bg`            | background                |                   |
+| `bgImage`       | background-image          |                   |
+| `bgSize`        | background-size           |                   |
+| `border`        | border                    |                   |
+| `borderLeft`    | border-left               |                   |
+| `borderRight`   | border-right              |                   |
+| `borderBottom`  | border-bottom             |                   |
+| `borderRadius`  | border-radius             |                   |
+| `boxShadow`     | box-shadow                |                   |
+| `css`           | any css                   |                   |
+| `m`             | margin                    |                   |
+| `mt`            | margin-top                |                   |
+| `mb`            | margin-bottom             |                   |
+| `ml`            | margin-left               |                   |
+| `mr`            | margin-right              |                   |
+| `mx`            | `ml` and `mr`             |                   |
+| `my`            | `mt` and `mb`             |                   |
+| `p`             | padding                   |                   |
+| `pt`            | padding-top               |                   |
+| `pb`            | padding-bottom            |                   |
+| `pl`            | padding-left              |                   |
+| `pr`            | padding-right             |                   |
+| `px`            | `pl` and `pr`             |                   |
+| `py`            | `pt` and `pb`             |                   |
+| `h`             | height                    |                   |
+| `w`             | width                     |                   |
+| `minh`          | min-height                |                   |
+| `minw`          | min-width                 |                   |
+| `maxh`          | max-height                |                   |
+| `maxw`          | max-width                 |                   |
+| `t`             | top                       |                   |
+| `b`             | bottom                    |                   |
+| `l`             | left                      |                   |
+| `r`             | right                     |                   |
+| `x`             | `r` and `l`               |                   |
+| `y`             | `t` and `b`               |                   |
+| `c`             | `cw` and `ch`             | getCells          |
+| `cw`            | cells wide                | getCells          |
+| `ch`            | cells height (cells tall) | getCells          |
+| `mincw`         | min cells wide            | getCells          |
+| `maxcw`         | max cells wide            | getCells          |
+| `minch`         | min cells height          | getCells          |
+| `maxch`         | max cells height          | getCells          |
+| `cm`            | cells margin              | getCells          |
+| `cml`           | cells margin-left         | getCells          |
+| `cmr`           | cells margin-right        | getCells          |
+| `cmt`           | cells margin-top          | getCells          |
+| `cmb`           | cells margin-bottom       | getCells          |
+| `cmx`           | `cml` and `cmr`           | getCells          |
+| `cmy`           | `cmt` and `cmb`           | getCells          |
+| `cp`            | cells padding             | getCells          |
+| `cpl`           | cells padding-left        | getCells          |
+| `cpr`           | cells padding-right       | getCells          |
+| `cpt`           | cells padding-top         | getCells          |
+| `cpb`           | cells padding-bottom      | getCells          |
+| `cpx`           | `cpl` and `cpr`           | getCells          |
+| `cpy`           | `cpt` and `cpb`           | getCells          |
+| `ct`            | cells top                 | getCells          |
+| `cb`            | cells bottom              | getCells          |
+| `cl`            | cells left                | getCells          |
+| `cr`            | cells right               | getCells          |
+| `cx`            | `cr` and `cl`             | getCells          |
+| `cy`            | `ct` and `cb`             | getCells          |
+| `ctransform`    | cells transform           | getCellsTranslate |
+| `direction`     | flex-direction            |                   |
+| `wrap`          | flex-wrap                 |                   |
+| `align`         | justify-content           | getFlexProperty   |
+| `valign`        | align-items               | getFlexProperty   |
+| `valignContent` | align-content             | getFlexProperty   |
+| `grow`          | flex-grow                 |                   |
+| `shrink`        | flex-shrink               |                   |
+| `fb`            | flex-basis                |                   |
+| `position`      | position                  |                   |
+| `z`             | z-index                   |                   |
+| `color`         | color                     |                   |
+| `textColor`     | color                     |                   |
+| `textAlign`     | text-align                |                   |
+| `textTransform` | text-transform            |                   |
+| `fontFamily`    | font-family               |                   |
+| `fontSize`      | font-size                 |                   |
+| `fontWeight`    | font-weight               |                   |
+| `lineHeight`    | line-height               |                   |
+
+## Available Props on Flex, which extends Element
+
+| prop      | desc                                                       |
+| --------- | ---------------------------------------------------------- |
+| `columns` | Generates widths on children if using Element or Flex.Item |
 
 ## Breakpoints
 
 ### About
 
-All of the sharedProps can take a single value, or an object of Breakpoints. You have all the choices you could possibly use for creating style within breakpoints. This system is _mobile first_, but there's several ways to mix it up.
+All of the Element props can take a single value, or an object of Breakpoints. You have all the choices you could possibly use for creating style within breakpoints. This system is _mobile first_, but there's several ways to mix it up.
 
 ### Example
 
@@ -187,7 +190,7 @@ returns
 font-size: 12px;
 
 @media (min-width: 414px) and (max-width: 1023px) {
-  A css formula to scale the font-size from 12px to 36px based on screen width
+  // Insert css formula to scale the font-size from 12px to 36px based on screen width
 }
 
 @media (min-width: 1024px) {
@@ -248,6 +251,7 @@ You'll want to include a few things in your head tag.
     --sv-cell: calc(var(--scr) / var(--sv-cells));
   }
 
+  /* Stop your cells from scaling at a desired breakpoint */
   @media (min-width: 2000px) {
     :root {
       --sv-cell: 50px;
