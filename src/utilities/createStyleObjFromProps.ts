@@ -1,4 +1,4 @@
-import { dimensionPropsAvailable } from '../prop-api'
+import { propsAvailableArray } from '../prop-api/propApi'
 import { mergePropsToStyleObj } from './mergePropsToStyleObj'
 
 export function createStyleObjFromProps(props) {
@@ -7,6 +7,6 @@ export function createStyleObjFromProps(props) {
   }
 
   const styleObj = {}
-  mergePropsToStyleObj({ props, styleObj, propsAvailable: [...dimensionPropsAvailable] })
+  mergePropsToStyleObj({ props, styleObj, propsAvailable: propsAvailableArray })
   return styleObj
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { dimensionProps, appearanceProps, positionProps, textProps, flexProps } from '../../prop-api'
+import { propApi } from '../../prop-api'
 import { ElementProps } from './ElementProps'
 import { isNull } from '../../utilities/isTrue'
 
@@ -9,13 +9,12 @@ const defaultProps: ElementProps = {
 }
 
 const Element: React.FunctionComponent<ElementProps> & { defaultProps: Partial<ElementProps> } = ({
-  className,
   children,
   element,
   forwardRef,
   ...rest
 }) => (
-  <StyledElement as={element} className={className} ref={forwardRef} {...rest}>
+  <StyledElement as={element} ref={forwardRef} {...rest}>
     {children}
   </StyledElement>
 )
@@ -38,11 +37,7 @@ const StyledElement = styled.div([
       styleObj.position = 'relative'
     }
 
-    appearanceProps({ props, styleObj })
-    dimensionProps({ props, styleObj })
-    positionProps({ props, styleObj })
-    textProps({ props, styleObj })
-    flexProps({ props, styleObj })
+    propApi({ props, styleObj })
 
     return styleObj
   },
