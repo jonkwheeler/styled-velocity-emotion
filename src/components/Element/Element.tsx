@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { propApi } from '../../prop-api'
 import { ElementProps } from './ElementProps'
-import { isNull } from '../../utilities/isTrue'
+import { isNull, mergePropsToStyleObj, cssProp } from '../../utilities'
 
 const defaultProps: ElementProps = {
   element: 'div',
@@ -37,11 +36,9 @@ const StyledElement = styled.div([
       styleObj.position = 'relative'
     }
 
-    propApi({ props, styleObj })
+    mergePropsToStyleObj({ props, styleObj })
 
     return styleObj
   },
-  function (props: any = {}) {
-    return props.css
-  },
+  cssProp,
 ])

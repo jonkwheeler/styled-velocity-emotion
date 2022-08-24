@@ -44,7 +44,7 @@ export function getCellsTranslate({ x, y }) {
   return `translate(${x ? (isString(x) ? x : getCells(x)) : 0}, ${y ? (isString(y) ? y : getCells(y)) : 0})`
 }
 
-const conversionTypes = {
+export const conversionTypes = {
   getCells,
   getCellsTranslate,
   getFlexProperty,

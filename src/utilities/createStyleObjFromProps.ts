@@ -1,12 +1,11 @@
-import { propsAvailableArray } from '../prop-api/propApi'
 import { mergePropsToStyleObj } from './mergePropsToStyleObj'
 
-export function createStyleObjFromProps(props) {
-  if (!props) {
+export function createStyleObjFromProps(svProps) {
+  if (!svProps) {
     return {}
   }
 
   const styleObj = {}
-  mergePropsToStyleObj({ props, styleObj, propsAvailable: propsAvailableArray })
+  mergePropsToStyleObj({ props: svProps, styleObj })
   return styleObj
 }

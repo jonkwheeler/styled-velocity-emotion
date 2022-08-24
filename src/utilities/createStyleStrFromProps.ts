@@ -1,12 +1,12 @@
 import { css } from '@emotion/react'
 import { createStyleObjFromProps } from './createStyleObjFromProps'
 
-export function createStyleStrFromProps(props) {
-  if (!props) {
+export function createStyleStrFromProps(svProps) {
+  if (!svProps) {
     return ''
   }
 
   return css`
-    ${createStyleObjFromProps(props)}
+    ${createStyleObjFromProps(svProps)}
   `.styles
 }

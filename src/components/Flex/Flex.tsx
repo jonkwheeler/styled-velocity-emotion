@@ -17,8 +17,6 @@ function getParsedChildProps(columns) {
 
     if (isObject(columns)) {
       Object.keys(columns).map(breakpoint => {
-        console.log(columns[breakpoint])
-
         props.fb[breakpoint] = getColumnWidth(columns[breakpoint])
       })
     } else {

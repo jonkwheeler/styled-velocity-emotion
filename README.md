@@ -29,7 +29,7 @@ import { appearanceProps, dimensionProps } from 'styled-velocity-emotion'
 Import example:
 
 ```js
-import { Element, Flex, Main, Section } 'styled-velocity-emotion'
+import { Element, Flex } 'styled-velocity-emotion'
 ```
 
 ## Available sharedProps
@@ -84,7 +84,7 @@ import { Element, Flex, Main, Section } 'styled-velocity-emotion'
 | ""                | `cpx`           | `cpl` and `cpr`           | getCells          |
 | ""                | `cpy`           | `cpt` and `cpb`           | getCells          |
 | ""                | `ctransform`    | cells transform           | getCellsTranslate |
-| `flexProps`       | `direction`     | flex-direction            | getFlexProperty   |
+| `flexProps`       | `direction`     | flex-direction            |                   |
 | ""                | `wrap`          | flex-wrap                 |                   |
 | ""                | `align`         | justify-content           | getFlexProperty   |
 | ""                | `valign`        | align-items               | getFlexProperty   |
@@ -246,7 +246,6 @@ You'll want to include a few things in your head tag.
     --scr: 100vw;
     --sv-cells: 40;
     --sv-cell: calc(var(--scr) / var(--sv-cells));
-    --sv-section-item-maxw: 2000px;
   }
 
   @media (min-width: 2000px) {

@@ -11,3 +11,5 @@ export const isBoolean = x => typeof x === 'boolean'
 export const isString = x => typeof x === 'string'
 
 export const isArray = arr => ({}.toString.call(arr) === '[object Array]')
+
+export const stringContains = (doesThis: string, containThis: string) => doesThis.indexOf(containThis) !== -1
