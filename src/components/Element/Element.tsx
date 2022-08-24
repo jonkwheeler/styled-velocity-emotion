@@ -1,46 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { dimensionProps, appearanceProps, positionProps, textProps, flexProps } from '../shared-props'
-import { SharedProps } from '../prop-types/SharedProps'
-import { isNull } from '../utilities/isTrue'
-
-export interface ElementProps extends SharedProps {
-  /**
-   * The children of the Element component.
-   * @type React.ReactNode
-   */
-  children?: React.ReactNode
-
-  /**
-   * The className of the Element component.
-   * @type string
-   */
-  className?: string
-
-  /**
-   * Define the html element being output
-   * @type string
-   * @defaultValue 'div'
-   * @example
-   * element="div"
-   * element="span"
-   */
-  element?: string
-
-  /**
-   * Pass a ref to the Styled-Component
-   * @example
-   * const myRef = React.createRef();
-   * <Element forwardRef={myRef} />
-   */
-  forwardRef?: React.LegacyRef<HTMLDivElement> | undefined
-
-  /**
-   * The id of the Element component.
-   * @type string
-   */
-  id?: string | undefined
-}
+import { dimensionProps, appearanceProps, positionProps, textProps, flexProps } from '../../prop-api'
+import { ElementProps } from './ElementProps'
+import { isNull } from '../../utilities/isTrue'
 
 const defaultProps: ElementProps = {
   element: 'div',

@@ -41,8 +41,6 @@ export function mergePropsToStyleObj({ props, propsAvailable, styleObj }) {
                 minValue: value[0],
                 maxValue: value[1],
               })
-
-              console.log('value', value)
             }
 
             addStyleToObj({ properties, value, styleObj: thisStyle, conversionType })

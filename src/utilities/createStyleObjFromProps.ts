@@ -1,4 +1,4 @@
-import { dimensionPropsAvailable } from '../shared-props'
+import { dimensionPropsAvailable } from '../prop-api'
 import { mergePropsToStyleObj } from './mergePropsToStyleObj'
 
 export function createStyleObjFromProps(props) {

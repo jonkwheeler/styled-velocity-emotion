@@ -1,3 +1,3 @@
 export * from './components'
 export * from './utilities'
-export * from './props'
+export * from './prop-api'

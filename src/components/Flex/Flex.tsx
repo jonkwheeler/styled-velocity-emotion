@@ -1,11 +1,7 @@
 import React from 'react'
-import { Element } from './Element'
-import { FlexContainerProps } from '../prop-types/FlexContainerProps'
-import { FlexItemProps } from '../prop-types/FlexItemProps'
-import { renderChildrenWithProps } from '../utilities/renderChildrenWithProps'
-import { isObject } from '../utilities/isTrue'
-
-export type FlexProps = FlexContainerProps
+import { Element, ElementProps } from '../Element'
+import { FlexProps } from './FlexProps'
+import { isObject } from '../../utilities/isTrue'
 
 const defaultProps: FlexProps = {}
 
@@ -41,7 +37,18 @@ const Flex: React.FunctionComponent<FlexProps> & {
 
   return (
     <Element display="flex" {...(columns ? { wrap: 'wrap' } : {})} {...rest}>
-      {renderChildrenWithProps({ children, ...parsedChildProps })}
+      {React.Children.map(children, child => {
+        if (React.isValidElement(child)) {
+          const { type = {} }: any = child
+          const { displayName = '__UnknownComponent__' } = type
+
+          // Only pass SV props to an SV Element
+          const isValidChild = [Element.displayName, FlexItem.displayName].indexOf(displayName) !== -1
+
+          return React.cloneElement(child, { ...(isValidChild ? parsedChildProps : {}), ...rest })
+        }
+        return child
+      })}
     </Element>
   )
 }
@@ -50,19 +57,9 @@ Flex.defaultProps = defaultProps
 Flex.displayName = 'Flex'
 
 //Flex.Item
-const flexItemDefaultProps: FlexProps = {}
-
-const FlexItem: React.FunctionComponent<FlexItemProps> & {
-  defaultProps: Partial<FlexItemProps>
-} = ({ children, ...rest }) => (
-  <Element maxw="100%" {...rest}>
-    {children}
-  </Element>
-)
-
-FlexItem.defaultProps = flexItemDefaultProps
+export type FlexItemProps = ElementProps
+const FlexItem = ({ children, ...rest }: FlexItemProps) => <Element {...rest}>{children}</Element>
 FlexItem.displayName = 'FlexItem'
-
 Flex.Item = FlexItem
 
 export { Flex }

@@ -6,7 +6,111 @@ type PropsAndAttrs = HTMLAttributes<any> & HTMLProps<HTMLDivElement>
 
 type ReducedHTMLProps = Omit<PropsAndAttrs, 'color' | 'wrap'>
 
-export interface SharedProps extends ReducedHTMLProps {
+interface SpecificFlexContainerProps {
+  /**
+   * direction
+   * @returns flex-direction css property
+   * @type object | 'row' | 'column'
+   * @example
+   * direction='row'
+   * direction={{ 0: 'row', 768: 'column' }}
+   */
+  direction?: object | 'row' | 'column'
+
+  /**
+   * wrap
+   * @returns flex-wrap css property
+   * @type object | 'wrap' | 'nowrap'
+   * @example
+   * wrap='wrap'
+   * wrap={{ 0: 'wrap', 768: 'nowrap' }}
+   */
+  wrap?: object | 'wrap' | 'nowrap'
+
+  /**
+   * align
+   * @returns justify-content css property (horizontal justification)
+   * @type object | 'left' | 'center' | 'middle' | 'right' | 'space-between' | 'space-around'
+   * @example
+   * align='left'
+   * align={{ 0: 'left', 768: 'center' }}
+   */
+  align?: object | 'left' | 'center' | 'middle' | 'right' | 'space-between' | 'space-around'
+
+  /**
+   * valign
+   * @returns align-items css property (vertical justification)
+   * @type object | 'top' | 'middle' | 'center' | 'bottom' | 'baseline' | 'stretch' | 'space-between' | 'space-around'
+   * @desc 'center' and 'middle' return the same thing
+   * @example
+   * valign='center'
+   * valign={{ 0: 'middle', 768: 'space-between' }}
+   */
+  valign?: object | 'top' | 'middle' | 'center' | 'bottom' | 'baseline' | 'stretch' | 'space-between' | 'space-around'
+
+  /**
+   * valignContent
+   * @returns align-content css property (vertical justification when flex container has height greater than children)
+   * @type string | object | 'top' | 'middle'| 'center' | 'bottom' | 'baseline' | 'stretch' | 'space-between' | 'space-around'
+   * @example
+   * valignContent='center'
+   * valignContent={{ 0: 'middle', 768: 'space-between' }}
+   */
+  valignContent?:
+    | string
+    | object
+    | 'top'
+    | 'middle'
+    | 'center'
+    | 'bottom'
+    | 'baseline'
+    | 'stretch'
+    | 'space-between'
+    | 'space-around'
+}
+
+interface SpecificFlexItemProps {
+  /**
+   * @returns align-self css property
+   * @type object | 'top' | 'bottom' | 'center' | 'middle' | 'stretch'
+   * @example
+   * alignSelf='top'
+   * alignSelf={{ 0: 'top', 768: 'bottom' }}
+   */
+  alignSelf?: object | 'top' | 'bottom' | 'center' | 'middle' | 'stretch'
+
+  /**
+   * grow
+   * @returns flex-grow css property
+   * @type string | number | object
+   * @example
+   * grow={1}
+   * grow={{ 0: 1, 768: 0 }}
+   */
+  grow?: string | number | object
+
+  /**
+   * shrink
+   * @returns flex-shrink css property
+   * @type string | number | object
+   * @example
+   * shrink={0}
+   * shrink={{ 0: 1, 768: 0 }}
+   */
+  shrink?: string | number | object
+
+  /**
+   * order
+   * @returns order css property
+   * @type string | number | object
+   * @example
+   * order={0}
+   * order={{ 0: 1, 768: -1 }}
+   */
+  order?: string | number | object
+}
+
+export interface StyleProps {
   /**
    * bg
    * @returns background css property
@@ -866,4 +970,42 @@ export interface SharedProps extends ReducedHTMLProps {
    * lineHeight={{ 0: '2.5', 768: '2' }}
    */
   lineHeight?: string | number | object
+}
+
+export interface ElementProps extends StyleProps, SpecificFlexContainerProps, SpecificFlexItemProps, ReducedHTMLProps {
+  /**
+   * The children of the Element component.
+   * @type React.ReactNode
+   */
+  children?: React.ReactNode
+
+  /**
+   * The className of the Element component.
+   * @type string
+   */
+  className?: string
+
+  /**
+   * Define the html element being output
+   * @type string
+   * @defaultValue 'div'
+   * @example
+   * element="div"
+   * element="span"
+   */
+  element?: string
+
+  /**
+   * Pass a ref to the Styled-Component
+   * @example
+   * const myRef = React.createRef();
+   * <Element forwardRef={myRef} />
+   */
+  forwardRef?: React.LegacyRef<HTMLDivElement> | undefined
+
+  /**
+   * The id of the Element component.
+   * @type string
+   */
+  id?: string | undefined
 }
