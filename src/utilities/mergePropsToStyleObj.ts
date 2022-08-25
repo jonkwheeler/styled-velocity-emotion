@@ -2,21 +2,21 @@ import { hasKey, isObject, isString, isArray } from './isTrue'
 import { addStyleToObj } from './addStyleToObj'
 import { makeMediaQueryString } from './makeMediaQueryString'
 import { makeScalingPxString } from './makeScalingPxString'
-import { propKeysAvailable as _propKeysAvailable } from '../prop-api'
+import { propsAvailable as _propsAvailable } from '../prop-api'
 
 export function mergePropsToStyleObj({
   props = {},
-  propKeysAvailable = _propKeysAvailable,
+  propsAvailable = _propsAvailable,
   styleObj = {},
 }: {
   props: Record<string, unknown>
-  propKeysAvailable?: any
-  styleObj: Record<string, unknown>
+  propsAvailable?: any
+  styleObj: Record<string, unknown> | any
 }) {
   Object.keys(props).map(propName => {
-    if (hasKey(propKeysAvailable, propName)) {
+    if (hasKey(propsAvailable, propName)) {
       const propValue: any = props[propName]
-      const matchingPropKey = propKeysAvailable[propName]
+      const matchingPropKey = propsAvailable[propName]
       const { properties, conversionType } = matchingPropKey
       const hasMediaQueries = isObject(propValue)
 
@@ -55,8 +55,6 @@ export function mergePropsToStyleObj({
             addStyleToObj({ properties, value, styleObj: thisStyle, conversionType })
 
             styleObj[mq] = {
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-ignore
               ...styleObj[mq],
               ...thisStyle,
             }

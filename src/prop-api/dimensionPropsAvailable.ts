@@ -1,4 +1,4 @@
-const prop = {
+const schema = {
   // dimensions
   h: 'height',
   w: 'width',
@@ -23,209 +23,165 @@ const prop = {
   transform: 'transform',
 }
 
-export const dimensionPropsAvailable = [
+export const dimensionPropsAvailable = {
   // dimensions
-  {
-    prop: 'h',
-    properties: [prop.h],
+  h: {
+    properties: [schema.h],
   },
-  {
-    prop: 'w',
-    properties: [prop.w],
+  w: {
+    properties: [schema.w],
   },
-  {
-    prop: 'fb',
-    properties: [prop.fb],
+  fb: {
+    properties: [schema.fb],
   },
-  {
-    prop: 'minh',
-    properties: [prop.minh],
+  minh: {
+    properties: [schema.minh],
   },
-  {
-    prop: 'minw',
-    properties: [prop.minw],
+  minw: {
+    properties: [schema.minw],
   },
-  {
-    prop: 'maxh',
-    properties: [prop.maxh],
+  maxh: {
+    properties: [schema.maxh],
   },
-  {
-    prop: 'maxw',
-    properties: [prop.maxw],
+  maxw: {
+    properties: [schema.maxw],
   },
 
   // margins and padding
-  {
-    prop: 'm',
-    properties: [prop.m],
+  m: {
+    properties: [schema.m],
   },
-  {
-    prop: 'mt',
-    properties: [prop.mt],
+  mt: {
+    properties: [schema.mt],
   },
-  {
-    prop: 'mb',
-    properties: [prop.mb],
+  mb: {
+    properties: [schema.mb],
   },
-  {
-    prop: 'ml',
-    properties: [prop.ml],
+  ml: {
+    properties: [schema.ml],
   },
-  {
-    prop: 'mr',
-    properties: [prop.mr],
+  mr: {
+    properties: [schema.mr],
   },
-  {
-    prop: 'mx',
-    properties: [prop.ml, prop.mr],
+  mx: {
+    properties: [schema.ml, schema.mr],
   },
-  {
-    prop: 'my',
-    properties: [prop.mt, prop.mb],
+  my: {
+    properties: [schema.mt, schema.mb],
   },
-  {
-    prop: 'p',
-    properties: [prop.p],
+  p: {
+    properties: [schema.p],
   },
-  {
-    prop: 'pt',
-    properties: [prop.pt],
+  pt: {
+    properties: [schema.pt],
   },
-  {
-    prop: 'pb',
-    properties: [prop.pb],
+  pb: {
+    properties: [schema.pb],
   },
-  {
-    prop: 'pl',
-    properties: [prop.pl],
+  pl: {
+    properties: [schema.pl],
   },
-  {
-    prop: 'pr',
-    properties: [prop.pr],
+  pr: {
+    properties: [schema.pr],
   },
-  {
-    prop: 'px',
-    properties: [prop.pl, prop.pr],
+  px: {
+    properties: [schema.pl, schema.pr],
   },
-  {
-    prop: 'py',
-    properties: [prop.pt, prop.pb],
+  py: {
+    properties: [schema.pt, schema.pb],
   },
 
   // cell dimensions
-  {
-    prop: 'c',
-    properties: [prop.w, prop.h],
+  c: {
+    properties: [schema.w, schema.h],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cw',
-    properties: [prop.w],
+  cw: {
+    properties: [schema.w],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cfb',
-    properties: [prop.fb],
+  cfb: {
+    properties: [schema.fb],
     conversionType: 'getCells',
   },
-  {
-    prop: 'ch',
-    properties: [prop.h],
+  ch: {
+    properties: [schema.h],
     conversionType: 'getCells',
   },
-  {
-    prop: 'mincw',
-    properties: [prop.minw],
+  mincw: {
+    properties: [schema.minw],
     conversionType: 'getCells',
   },
-  {
-    prop: 'minch',
-    properties: [prop.minh],
+  minch: {
+    properties: [schema.minh],
     conversionType: 'getCells',
   },
-  {
-    prop: 'maxcw',
-    properties: [prop.maxw],
+  maxcw: {
+    properties: [schema.maxw],
     conversionType: 'getCells',
   },
-  {
-    prop: 'maxch',
-    properties: [prop.maxh],
+  maxch: {
+    properties: [schema.maxh],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cm',
-    properties: [prop.m],
+  cm: {
+    properties: [schema.m],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cml',
-    properties: [prop.ml],
+  cml: {
+    properties: [schema.ml],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cmr',
-    properties: [prop.mr],
+  cmr: {
+    properties: [schema.mr],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cmx',
-    properties: [prop.ml, prop.mr],
+  cmx: {
+    properties: [schema.ml, schema.mr],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cmt',
-    properties: [prop.mt],
+  cmt: {
+    properties: [schema.mt],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cmb',
-    properties: [prop.mb],
+  cmb: {
+    properties: [schema.mb],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cmy',
-    properties: [prop.mt, prop.mb],
+  cmy: {
+    properties: [schema.mt, schema.mb],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cp',
-    properties: [prop.p],
+  cp: {
+    properties: [schema.p],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cpl',
-    properties: [prop.pl],
+  cpl: {
+    properties: [schema.pl],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cpr',
-    properties: [prop.pr],
+  cpr: {
+    properties: [schema.pr],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cpx',
-    properties: [prop.pl, prop.pr],
+  cpx: {
+    properties: [schema.pl, schema.pr],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cpt',
-    properties: [prop.pt],
+  cpt: {
+    properties: [schema.pt],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cpb',
-    properties: [prop.pb],
+  cpb: {
+    properties: [schema.pb],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cpy',
-    properties: [prop.pt, prop.pb],
+  cpy: {
+    properties: [schema.pt, schema.pb],
     conversionType: 'getCells',
   },
-  {
-    prop: 'ctransform',
-    properties: [prop.transform],
+  ctransform: {
+    properties: [schema.transform],
     conversionType: 'getCellsTranslate',
   },
-]
+}

@@ -1,4 +1,4 @@
-const prop = {
+const schema = {
   bg: 'background',
   bgColor: 'backgroundColor',
   bgImage: 'backgroundImage',
@@ -14,57 +14,44 @@ const prop = {
   display: 'display',
 }
 
-export const appearancePropsAvailable = [
-  {
-    prop: 'bg',
-    properties: [prop.bg],
+export const appearancePropsAvailable = {
+  bg: {
+    properties: [schema.bg],
   },
-  {
-    prop: 'bgColor',
-    properties: [prop.bgColor],
+  bgColor: {
+    properties: [schema.bgColor],
   },
-  {
-    prop: 'bgImage',
-    properties: [prop.bgImage],
+  bgImage: {
+    properties: [schema.bgImage],
   },
-  {
-    prop: 'bgPosition',
-    properties: [prop.bgPosition],
+  bgPosition: {
+    properties: [schema.bgPosition],
   },
-  {
-    prop: 'bgSize',
-    properties: [prop.bgSize],
+  bgSize: {
+    properties: [schema.bgSize],
   },
-  {
-    prop: 'borderRadius',
-    properties: [prop.borderRadius],
+  borderRadius: {
+    properties: [schema.borderRadius],
   },
-  {
-    prop: 'border',
-    properties: [prop.border],
+  border: {
+    properties: [schema.border],
   },
-  {
-    prop: 'borderLeft',
-    properties: [prop.borderLeft],
+  borderLeft: {
+    properties: [schema.borderLeft],
   },
-  {
-    prop: 'borderRight',
-    properties: [prop.borderRight],
+  borderRight: {
+    properties: [schema.borderRight],
   },
-  {
-    prop: 'borderTop',
-    properties: [prop.borderTop],
+  borderTop: {
+    properties: [schema.borderTop],
   },
-  {
-    prop: 'borderBottom',
-    properties: [prop.borderBottom],
+  borderBottom: {
+    properties: [schema.borderBottom],
   },
-  {
-    prop: 'boxShadow',
-    properties: [prop.boxShadow],
+  boxShadow: {
+    properties: [schema.boxShadow],
   },
-  {
-    prop: 'display',
-    properties: [prop.display],
+  display: {
+    properties: [schema.display],
   },
-]
+}

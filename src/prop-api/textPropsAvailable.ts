@@ -1,38 +1,29 @@
-export const textPropsAvailable = [
-  {
-    prop: 'color',
+export const textPropsAvailable = {
+  color: {
     properties: ['color'],
   },
-  {
-    prop: 'textColor',
+  textColor: {
     properties: ['color'],
   },
-  {
-    prop: 'textAlign',
+  textAlign: {
     properties: ['textAlign'],
   },
-  {
-    prop: 'textTransform',
+  textTransform: {
     properties: ['textTransform'],
   },
-  {
-    prop: 'fontFamily',
+  fontFamily: {
     properties: ['fontFamily'],
   },
-  {
-    prop: 'fontSize',
+  fontSize: {
     properties: ['fontSize'],
   },
-  {
-    prop: 'fontStyle',
+  fontStyle: {
     properties: ['fontStyle'],
   },
-  {
-    prop: 'fontWeight',
+  fontWeight: {
     properties: ['fontWeight'],
   },
-  {
-    prop: 'lineHeight',
+  lineHeight: {
     properties: ['lineHeight'],
   },
-]
+}

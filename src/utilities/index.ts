@@ -1,6 +1,5 @@
 export * from './addStyleToObj'
 export * from './convertValue'
-export * from './createPropKeys'
 export * from './createStyleObjFromProps'
 export * from './createStyleStrFromProps'
 export * from './cssProp'

@@ -1,4 +1,4 @@
-const prop = {
+const schema = {
   t: 'top',
   b: 'bottom',
   r: 'right',
@@ -7,74 +7,62 @@ const prop = {
   z: 'zIndex',
 }
 
-export const positionPropsAvailable = [
+export const positionPropsAvailable = {
   //position
-  {
-    prop: 't',
-    properties: [prop.t],
+  t: {
+    properties: [schema.t],
   },
-  {
-    prop: 'b',
-    properties: [prop.b],
+  b: {
+    properties: [schema.b],
   },
-  {
-    prop: 'l',
-    properties: [prop.l],
+  l: {
+    properties: [schema.l],
   },
-  {
-    prop: 'r',
-    properties: [prop.r],
+  r: {
+    properties: [schema.r],
   },
-  {
-    prop: 'x',
-    properties: [prop.l, prop.r],
+  x: {
+    properties: [schema.l, schema.r],
   },
-  {
-    prop: 'y',
-    properties: [prop.t, prop.b],
+  y: {
+    properties: [schema.t, schema.b],
     propertyTwo: 'bottom',
   },
 
   // cell
-  {
-    prop: 'ct',
-    properties: [prop.t],
+  ct: {
+    properties: [schema.t],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cb',
-    properties: [prop.b],
+  cb: {
+    properties: [schema.b],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cl',
-    properties: [prop.l],
+  cl: {
+    properties: [schema.l],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cr',
-    properties: [prop.r],
+  cr: {
+    properties: [schema.r],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cx',
-    properties: [prop.l, prop.r],
-    propertyTwo: 'right',
+  cx: {
+    properties: [schema.l, schema.r],
     conversionType: 'getCells',
   },
-  {
-    prop: 'cy',
-    properties: [prop.t, prop.b],
+  cy: {
+    properties: [schema.t, schema.b],
     conversionType: 'getCells',
   },
 
   // layer
-  {
-    prop: 'position',
-    properties: [prop.position],
+  position: {
+    properties: [schema.position],
   },
-  {
-    prop: 'z',
-    properties: [prop.z],
+  z: {
+    properties: [schema.z],
   },
-]
+  zIndex: {
+    properties: [schema.z],
+  },
+}

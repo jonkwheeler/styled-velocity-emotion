@@ -28,6 +28,7 @@ import { Element, Flex } 'styled-velocity-emotion'
 
 | prop            | css property              | conversionType    |
 | --------------- | ------------------------- | ----------------- |
+| `css`           | any css                   |                   |
 | `bg`            | background                |                   |
 | `bgImage`       | background-image          |                   |
 | `bgSize`        | background-size           |                   |
@@ -37,7 +38,6 @@ import { Element, Flex } 'styled-velocity-emotion'
 | `borderBottom`  | border-bottom             |                   |
 | `borderRadius`  | border-radius             |                   |
 | `boxShadow`     | box-shadow                |                   |
-| `css`           | any css                   |                   |
 | `m`             | margin                    |                   |
 | `mt`            | margin-top                |                   |
 | `mb`            | margin-bottom             |                   |
@@ -102,6 +102,7 @@ import { Element, Flex } 'styled-velocity-emotion'
 | `fb`            | flex-basis                |                   |
 | `position`      | position                  |                   |
 | `z`             | z-index                   |                   |
+| `zIndex`        | z-index                   |                   |
 | `color`         | color                     |                   |
 | `textColor`     | color                     |                   |
 | `textAlign`     | text-align                |                   |

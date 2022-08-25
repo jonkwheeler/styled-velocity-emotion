@@ -1,4 +1,4 @@
-const prop = {
+const schema = {
   align: 'justifyContent',
   direction: 'flexDirection',
   grow: 'flexGrow',
@@ -9,41 +9,33 @@ const prop = {
   wrap: 'flexWrap',
 }
 
-export const flexPropsAvailable = [
-  {
-    prop: 'direction',
-    properties: [prop.direction],
+export const flexPropsAvailable = {
+  direction: {
+    properties: [schema.direction],
     conversionType: 'getFlexProperty',
   },
-  {
-    prop: 'wrap',
-    properties: [prop.wrap],
+  wrap: {
+    properties: [schema.wrap],
   },
-  {
-    prop: 'align',
-    properties: [prop.align],
+  align: {
+    properties: [schema.align],
     conversionType: 'getFlexProperty',
   },
-  {
-    prop: 'valign',
-    properties: [prop.valign],
+  valign: {
+    properties: [schema.valign],
     conversionType: 'getFlexProperty',
   },
-  {
-    prop: 'valignContent',
-    properties: [prop.valignContent],
+  valignContent: {
+    properties: [schema.valignContent],
     conversionType: 'getFlexProperty',
   },
-  {
-    prop: 'order',
-    properties: [prop.order],
+  order: {
+    properties: [schema.order],
   },
-  {
-    prop: 'grow',
-    properties: [prop.grow],
+  grow: {
+    properties: [schema.grow],
   },
-  {
-    prop: 'shrink',
-    properties: [prop.shrink],
+  shrink: {
+    properties: [schema.shrink],
   },
-]
+}
