@@ -882,6 +882,16 @@ export interface StyleProps {
   z?: string | number | object
 
   /**
+   * z
+   * @returns z-index css property
+   * @type string | number | object
+   * @example
+   * z={5}
+   * z={{ 0: 50, 768: 5 }}
+   */
+  zIndex?: string | number | object
+
+  /**
    * color
    * @returns color css property
    * @type string | object
