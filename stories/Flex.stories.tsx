@@ -8,8 +8,10 @@ export default {
 } as ComponentMeta<typeof Flex>
 
 const Template: ComponentStory<typeof Flex> = args => (
-  <Flex w="100%" columns={{ 0: 1, 500: 2, 600: 3 }} {...args}>
-    <Flex.Item>Flex Item</Flex.Item>
+  <Flex element="footer" w="100%" bgColor="red" columns={{ 0: 1, 768: 3 }} {...args}>
+    <Flex.Item element="span" bg="blue">
+      Flex Item
+    </Flex.Item>
     <Flex.Item>Flex Item</Flex.Item>
     <Flex.Item>Flex Item</Flex.Item>
   </Flex>

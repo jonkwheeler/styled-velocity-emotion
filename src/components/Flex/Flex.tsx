@@ -43,7 +43,7 @@ const Flex: React.FunctionComponent<FlexProps> & {
           // Only pass SV props to an SV Element
           const isValidChild = [Element.displayName, FlexItem.displayName].indexOf(displayName) !== -1
 
-          return React.cloneElement(child, { ...(isValidChild ? parsedChildProps : {}), ...rest })
+          return React.cloneElement(child, { ...(isValidChild ? parsedChildProps : {}) })
         }
         return child
       })}
