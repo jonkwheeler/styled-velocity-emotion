@@ -2,7 +2,7 @@
 
 Styled-Velocity with Emotion, a React-based styled prop and UI library to increase your velocity and help build your Design System.
 
-This package is based upon the learnings of my other package called `styled-velocity` which used `styled-components` under the hood. This time around I have switched to using the emotion api, and I also reduced the bundle size by about 80%, as well as the runtime.
+This package is based upon the learnings of my other package called [`styled-velocity`](https://github.com/jonkwheeler/styled-velocity) which used [`styled-components`](https://styled-components.com/) under the hood. This time around I have switched to using the [`emotion`](https://emotion.sh/) api, and I also reduced the bundle size by about 80%, as well as the runtime. I have found [`emotion`](https://emotion.sh/) plays a bit nicer with Next.js and has better support these days.
 
 ## Install
 
