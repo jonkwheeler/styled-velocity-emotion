@@ -16,5 +16,5 @@
     "target": "ES6"
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["src/**/*.stories.tsx"]
+  "exclude": ["src/**/*.stories.tsx", "_wip"]
 }
